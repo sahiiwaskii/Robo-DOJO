@@ -1,0 +1,309 @@
+<?xml version="1.0"?>
+<robot name="rover" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:property name="mesh_dir" value="package://rover_description/meshes" />
+  <xacro:property name="effort" value="100.0" />
+  <xacro:property name="velocity" value="10.0" />
+  <material name="mat_cad1eeff">
+    <color rgba="0.792157 0.819608 0.933333 1" />
+  </material>
+  <material name="mat_a0a0a0ff">
+    <color rgba="0.627451 0.627451 0.627451 1" />
+  </material>
+  <material name="mat_bfbfbfff">
+    <color rgba="0.74902 0.74902 0.74902 1" />
+  </material>
+  <material name="mat_ffffffff">
+    <color rgba="1 1 1 1" />
+  </material>
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0.0123006 -0.000458994 0.0522336" rpy="0 0 0" />
+      <mass value="4.64525" />
+      <inertia ixx="0.0172817" iyy="0.0367358" izz="0.0356348" ixy="0.000552433" iyz="-0.000184288" ixz="-0.00178452" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.106381 0.0202749 0.00707771" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="${mesh_dir}/base_link_0_Body1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="mat_cad1eeff" />
+    </visual>
+    <visual>
+      <origin xyz="-0.106365 0.0202749 0.00711236" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="${mesh_dir}/base_link_1_Body2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="mat_cad1eeff" />
+    </visual>
+    <visual>
+      <origin xyz="-0.106353 0.0202749 0.00711277" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="${mesh_dir}/base_link_2_Body3.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="mat_cad1eeff" />
+    </visual>
+    <collision>
+      <origin xyz="0.0135527 0.00019914 0.075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.25 0.15 0.14" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="fore_right_wheel">
+    <inertial>
+      <origin xyz="0.000244648 -0.0199956 0.000342114" rpy="0 0 0" />
+      <mass value="1.42445" />
+      <inertia ixx="0.000704201" iyy="0.00102831" izz="0.000704247" ixy="-3.96608e-06" iyz="-5.54614e-06" ixz="6.79202e-08" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.202496 0.121044 0.0070156" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="${mesh_dir}/fore_right_wheel_0_Body1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="mat_a0a0a0ff" />
+    </visual>
+    <collision>
+      <origin xyz="0.000244648 -0.0199956 0.000342114" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0383466" length="0.0416094" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="back_right_wheel">
+    <inertial>
+      <origin xyz="0.000593035 -0.0199879 0.000362408" rpy="0 0 0" />
+      <mass value="1.42445" />
+      <inertia ixx="0.000704437" iyy="0.00102806" izz="0.000704259" ixy="-9.61023e-06" iyz="-5.87289e-06" ixz="1.74247e-07" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.00155815 0.0753456 -0.0227239" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="${mesh_dir}/back_right_wheel_0_Body1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="mat_a0a0a0ff" />
+    </visual>
+    <collision>
+      <origin xyz="0.000593035 -0.0199879 0.000362408" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0385866" length="0.0436277" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Component87">
+    <inertial>
+      <origin xyz="-0.00062017 0.0199904 -1.44118e-05" rpy="0 0 0" />
+      <mass value="1.42445" />
+      <inertia ixx="0.000704464" iyy="0.00102814" izz="0.000704153" ixy="-1.00512e-05" iyz="-2.33575e-07" ixz="7.24631e-09" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.227255 -0.0313744 -0.0344146" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="${mesh_dir}/Component87_0_Body1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="mat_a0a0a0ff" />
+    </visual>
+    <collision>
+      <origin xyz="-0.00062017 0.0199904 -1.44118e-05" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0386122" length="0.0424128" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="back_left_wheel">
+    <inertial>
+      <origin xyz="-0.000613365 0.0199906 -1.39496e-05" rpy="0 0 0" />
+      <mass value="1.42445" />
+      <inertia ixx="0.000704457" iyy="0.00102815" izz="0.000704153" ixy="-9.94102e-06" iyz="-2.26086e-07" ixz="6.93693e-09" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.000613365 0.0399906 -1.39496e-05" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="${mesh_dir}/back_left_wheel_0_Body1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="mat_a0a0a0ff" />
+    </visual>
+    <collision>
+      <origin xyz="-0.000613365 0.0199906 -1.39496e-05" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0386058" length="0.0423856" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="TetsuZakura_Knights_Robot_Tipper_v1">
+    <inertial>
+      <origin xyz="0.0168147 -0.00727659 0.00302082" rpy="0 0 0" />
+      <mass value="0.0332101" />
+      <inertia ixx="7.44212e-06" iyy="2.12315e-05" izz="1.50178e-05" ixy="1.26147e-07" iyz="2.32711e-08" ixz="1.60436e-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0.00209597 -0.00500086 -0.000628201" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="${mesh_dir}/TetsuZakura_Knights_Robot_Tipper_v1_0_Body1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="mat_bfbfbfff" />
+    </visual>
+    <collision>
+      <origin xyz="0.0167848 -0.0075 -0.00156427" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0746807 0.01502 0.0616036" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Tilt_v1_1">
+    <inertial>
+      <origin xyz="5.6808e-06 -0.000207909 0.0133798" rpy="0 0 0" />
+      <mass value="0.0458217" />
+      <inertia ixx="3.55478e-06" iyy="3.55676e-06" izz="1.64288e-06" ixy="-5.41195e-11" iyz="-4.44089e-20" ixz="3.55271e-19" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.216262 0.04094 -0.0797522" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="${mesh_dir}/Tilt_v1_1_0_Body1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="mat_a0a0a0ff" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.0133798" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0154246 0.0154246 0.0267797" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="lidar">
+    <inertial>
+      <origin xyz="3.42516e-05 0 0.00999994" rpy="0 0 0" />
+      <mass value="0.557243" />
+      <inertia ixx="0.000175968" iyy="0.000175966" izz="0.000314781" ixy="1.06581e-18" iyz="-3.55271e-19" ixz="4.75465e-07" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.152275 0.024138 -0.183619" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="${mesh_dir}/lidar_0_Body1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="mat_ffffffff" />
+    </visual>
+    <collision>
+      <origin xyz="3.42516e-05 0 0.00999994" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0674498 0.0672445 0.0207108" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="pan_v1">
+    <inertial>
+      <origin xyz="0 0.0025 0" rpy="0 0 0" />
+      <mass value="0.002512" />
+      <inertia ixx="1.86307e-08" iyy="2.67947e-08" izz="1.86307e-08" ixy="-5.55112e-21" iyz="-9.71445e-21" ixz="5.55112e-21" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.226267 0.0435 -0.101" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="${mesh_dir}/pan_v1_0_Body1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="mat_a0a0a0ff" />
+    </visual>
+    <collision>
+      <origin xyz="0 0.0025 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.00802 0.00502 0.00802" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Tilt_v1_2">
+    <inertial>
+      <origin xyz="0.000207249 -0.00728907 0.0133798" rpy="0 0 0" />
+      <mass value="0.0458217" />
+      <inertia ixx="3.55478e-06" iyy="3.55676e-06" izz="1.64288e-06" ixy="-5.41386e-11" iyz="-3.15498e-11" ixz="-1.15468e-09" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.21606 0.0338588 -0.0797522" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="${mesh_dir}/Tilt_v1_2_0_Body1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="mat_a0a0a0ff" />
+    </visual>
+    <collision>
+      <origin xyz="0.00021293 -0.00749698 0.0133798" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0154408 0.0154251 0.0267887" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="camera">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.0023107" />
+      <inertia ixx="5.77544e-08" iyy="3.52587e-08" izz="2.40698e-08" ixy="6.15121e-10" iyz="4.87414e-12" ixz="-2.05022e-11" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.240229 0.0739215 -0.156173" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="${mesh_dir}/camera_0_Body1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="mat_ffffffff" />
+    </visual>
+  </link>
+  <joint name="fore_right_revolute_joint" type="continuous">
+    <parent link="base_link" />
+    <child link="fore_right_wheel" />
+    <origin xyz="0.0961302 -0.100769 9.5969e-05" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <dynamics damping="0.01" friction="0.0" />
+    <limit effort="${effort}" velocity="${velocity}" />
+  </joint>
+  <joint name="rare_right_revolute_joint" type="continuous">
+    <parent link="base_link" />
+    <child link="back_right_wheel" />
+    <origin xyz="-0.0933182 -0.100426 -0.000258081" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <dynamics damping="0.01" friction="0.0" />
+    <limit effort="${effort}" velocity="${velocity}" />
+  </joint>
+  <joint name="fore_left_revolute_joint" type="continuous">
+    <parent link="base_link" />
+    <child link="Component87" />
+    <origin xyz="0.0941321 0.101105 0.00032375" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <dynamics damping="0.01" friction="0.0" />
+    <limit effort="${effort}" velocity="${velocity}" />
+  </joint>
+  <joint name="rare_left_revolute_joint" type="continuous">
+    <parent link="base_link" />
+    <child link="back_left_wheel" />
+    <origin xyz="-0.0969441 0.10009 -0.000161638" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <dynamics damping="0.01" friction="0.0" />
+    <limit effort="${effort}" velocity="${velocity}" />
+  </joint>
+  <joint name="tipper_revolute_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="TetsuZakura_Knights_Robot_Tipper_v1" />
+    <origin xyz="0.145412 0.0119474 0.0109593" rpy="0 0 0" />
+  </joint>
+  <joint name="pan_revolute_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="Tilt_v1_1" />
+    <origin xyz="0.123549 -0.0407343 0.0678237" rpy="0 0 0" />
+  </joint>
+  <joint name="lidar_revolute_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="lidar" />
+    <origin xyz="0.044463 -0.00386306 0.162039" rpy="0 0 0" />
+  </joint>
+  <joint name="stepper_revolute_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="pan_v1" />
+    <origin xyz="-0.00947576 0.0437833 0.0789328" rpy="0 0 0" />
+  </joint>
+  <joint name="tilt_revolute_joint" type="fixed">
+    <parent link="Tilt_v1_1" />
+    <child link="Tilt_v1_2" />
+    <origin xyz="0.000204849 -0.0074972 0.0267597" rpy="0 0 0" />
+  </joint>
+  <joint name="camera_rigid_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="camera" />
+    <origin xyz="0.132417 -0.0536466 0.114593" rpy="0 0 0" />
+  </joint>
+  <xacro:include filename="$(find rover_description)/urdf/rover.gazebo.xacro" />
+</robot>
