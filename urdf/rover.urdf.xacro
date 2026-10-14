@@ -56,7 +56,7 @@
       <inertia ixx="0.000704201" iyy="0.00102831" izz="0.000704247" ixy="-3.96608e-06" iyz="-5.54614e-06" ixz="6.79202e-08" />
     </inertial>
     <visual>
-      <origin xyz="-0.202496 0.121044 0.0070156" rpy="1.5708 0 0" />
+      <origin xyz="-0.202496 -0.013323  -0.140697" rpy="1.5708 0 0" />
       <geometry>
         <mesh filename="${mesh_dir}/fore_right_wheel_0_Body1.stl" scale="0.001 0.001 0.001" />
       </geometry>
@@ -76,7 +76,7 @@
       <inertia ixx="0.000704437" iyy="0.00102806" izz="0.000704259" ixy="-9.61023e-06" iyz="-5.87289e-06" ixz="1.74247e-07" />
     </inertial>
     <visual>
-      <origin xyz="-0.00155815 0.0753456 -0.0227239" rpy="1.5708 0 0" />
+      <origin xyz="-0.001558 -0.043074 -0.094972" rpy="1.5708 0 0" />
       <geometry>
         <mesh filename="${mesh_dir}/back_right_wheel_0_Body1.stl" scale="0.001 0.001 0.001" />
       </geometry>
@@ -96,7 +96,7 @@
       <inertia ixx="0.000704464" iyy="0.00102814" izz="0.000704153" ixy="-1.00512e-05" iyz="-2.33575e-07" ixz="7.24631e-09" />
     </inertial>
     <visual>
-      <origin xyz="-0.227255 -0.0313744 -0.0344146" rpy="1.5708 0 0" />
+      <origin xyz="-0.227255 -0.014410 0.051350" rpy="1.5708 0 0" />
       <geometry>
         <mesh filename="${mesh_dir}/Component87_0_Body1.stl" scale="0.001 0.001 0.001" />
       </geometry>
@@ -116,7 +116,7 @@
       <inertia ixx="0.000704457" iyy="0.00102815" izz="0.000704153" ixy="-9.94102e-06" iyz="-2.26086e-07" ixz="6.93693e-09" />
     </inertial>
     <visual>
-      <origin xyz="-0.000613365 0.0399906 -1.39496e-05" rpy="1.5708 0 0" />
+      <origin xyz="-0.000613 0.019990 -0.020014" rpy="1.5708 0 0" />
       <geometry>
         <mesh filename="${mesh_dir}/back_left_wheel_0_Body1.stl" scale="0.001 0.001 0.001" />
       </geometry>
